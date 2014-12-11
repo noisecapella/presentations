@@ -1,0 +1,10 @@
+digraph G {
+	rankdir=LR;
+      "Base install" -> "Upload test data" -> "Match spectrum\nto peptides" -> F;
+      F  [label="Filtering"];
+      F -> M;
+      M  [label="Match peptides\nto proteins\n(method 1)"];
+      F -> "Match peptides\nto proteins\n(method 2)";
+      M -> "Spectral count,\ntext search";
+      M -> "Spectral count,\nregex matching";
+}
